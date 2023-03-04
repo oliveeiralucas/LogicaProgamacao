@@ -1,0 +1,88 @@
+#Exercicios 2
+
+1 - Crie um algoritmo que calcule o perímetro de um retângulo.
+
+2 - Crie um algoritmo que faça a conversão de temperatura em Fahrenheit para Celsius utilizando a seguinte fórmula: 
+F = (C * 1.8) + 32, onde F é a representação em Fahrenheit e C representa a temperatura em Celsius.
+
+3- Crie um algoritmo que verifique se o número lido é positivo, negativo ou igual a zero e informe o usuário.
+
+
+# caso 2
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Edson Shinki Kaneshima 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 23/02/2023
+Var
+// Seção de Declarações das variáveis 
+
+temperatura, celsius: real
+
+texto: caractere
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+escreval ("Bem vindo ao central de conversão de temperatura ^.^")
+
+escreval ("Caso deseje converter de celsius para Fahrenheit digite: F ")
+escreval ("Caso deseje converter de Fahrenheit para celsius digite: C ")
+leia (texto)
+
+
+
+
+
+se ((texto = "C")) entao
+escreval ("Escreva a temperatura em Fahrenheit: ")
+leia (temperatura)
+
+celsius <- (temperatura - 32)/1.8
+
+escreval ("O valor dessa temperatura em celcius é de: ", celsius)
+fimse
+
+
+se ((texto = "F")) entao
+escreval ("Escreva a temperatura em Celsius: ")
+leia (temperatura)
+celsius <- (temperatura*1.8) + 32
+escreval ("O valor dessa temperatura em Fahrenheit é de: ", celsius)
+fimse
+
+Fimalgoritmo
+
+# Caso 3
+
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Edson Shinki Kaneshima
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 23/02/2023
+Var
+// Seção de Declarações das variáveis
+numero: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+escreval ("Escreva o número: ")
+leia(numero)
+
+se ((numero = 0 )) entao
+   escreval ("Esse número é zero")
+fimse
+
+se ((numero > 0 )) entao
+   escreval ("Esse número é positivo")
+fimse
+
+se ((numero < 0 )) entao
+   escreval ("Esse número é negativo")
+fimse
+
+Fimalgoritmo
+
