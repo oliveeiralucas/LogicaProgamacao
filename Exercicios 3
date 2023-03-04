@@ -1,0 +1,196 @@
+#Exercicios 3
+
+1- Faça um algoritmo que leia o tempo de duração de um evento em uma fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
+
+
+2- Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias:
+infantil A = 5 - 7 anos
+infantil B = 8-10 anos
+juvenil A = 11-13 anos
+juvenil B = 14-17 anos
+adulto = maiores de 18 anos
+
+
+3-  O cardápio de uma lanchonete é o seguinte:
+Especificação       |     Código      |     Preço
+Cachorro quente  |     100            |       15,00
+Bauru simples      |     101            |       10,00
+Bauru com ovo     |     102            |       12,00
+Hambúrger           |      103            |       15,00
+Cheeseburguer    |      104            |       16,00
+
+Escreva um algoritmo que leia o nome do cliente, o código do item pedido, a quantidade e calcule o valor a ser pago por aquele lanche. Considere que a cada execução somente será calculado um item.
+
+
+# Caso 1:
+
+Algoritmo "calcula_tempo"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Edson Shinki Kaneshima
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 27/02/2023
+Var
+// Seção de Declarações das variáveis
+
+t, horas, minutos, segundos: real
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+horas <- 0
+minutos <- 0
+segundos <- 0
+
+Escreval("Informe a duração do processo de fábrica em segundos: ")
+leia (t)
+
+horas <- t/3600
+minutos <- (t mod 3600) / 60
+segundos <- t mod 60
+
+
+escreval ("O processo durou: ", horas, "h: ", minutos, "m: e ",  segundos, "s")
+Fimalgoritmo
+
+# Caso 2:
+Algoritmo "Verificação de Idade"
+
+Var
+// Seção de Declarações das variáveis
+   idade: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Digite a idade:")
+   leia(idade)
+
+escolha verdadeiro
+        caso ((idade >= 5) e (idade <=7))
+   escreval("Sua categoria é: Infantil A!")
+   
+   caso ((idade >= 8) e (idade <=10))
+   escreval("Sua categoria é: Infantil B!")
+   
+   caso ((idade >= 11) e (idade <=13))
+   escreval("Sua categoria é: Juvenil A!")
+   
+   caso ((idade >= 14) e (idade <=17))
+   escreval("Sua categoria é: Juvenil B!")
+   
+   caso (idade >= 18)
+   escreval("Sua categoria é: Adulto")
+   
+   outrocaso
+   escreval("Infelizmente voce não se enquadra em nenhuma categoria")
+fimescolha
+   
+Fimalgoritmo
+
+
+# caso 3
+
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Edson Shinki Kaneshima
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 27/02/2023
+Var
+// Seção de Declarações das variáveis
+nomeCliente, especificacao: caractere
+
+codigoPedido, quantidade: inteiro
+
+preco, precofinal: real
+
+verificador: logico
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+//informa o nome do cliente
+escreval ("informe o nome do cliente: ")
+leia (nomeCliente)
+
+//informa o código do pedido e fornece uma tabela de consulta para auxiliar
+escreval("Informe o código do pedido, somente 1 por vez: ")
+escreval("............................")
+escreval("")
+escreval("")
+escreval("Especificação    | Código")
+escreval("Cachorro quente  | 100")
+escreval("Bauru simples    | 101")
+escreval("Bauru com ovo    | 102")
+escreval("Hambúrger        | 103")
+escreval("Cheeseburguer    | 104")
+escreval("")
+escreval("........................")
+escreval("Informe o código do pedido, somente 1 por vez: ")
+leia(codigoPedido)
+
+//Informa a quantidade do item anterior
+escreval("Informe a quantidade do item anterior")
+leia (quantidade)
+
+//Atribui o código a uma Especificação
+
+//Atribui o Código a um Preço
+
+//Informa os dados e o valor do pedido completo
+escolha verdadeiro
+caso (codigoPedido = 100 )
+        preco <- 15
+        especificacao <- "Cachorro quente"
+        precofinal <- preco * quantidade
+        verificador <- verdadeiro
+        
+caso (codigoPedido = 101 )
+        preco <- 10
+        especificacao <- "Bauro Simples"
+        precofinal <- preco * quantidade
+        verificador <- verdadeiro
+        
+caso (codigoPedido = 102 )
+        preco <- 12
+        especificacao <- "Bauru com Ovo"
+        precofinal <- preco * quantidade
+        verificador <- verdadeiro
+
+caso (codigoPedido = 103 )
+        preco <- 15
+        especificacao <- "Hambúrguer"
+        precofinal <- preco * quantidade
+        verificador <- verdadeiro
+        
+caso (codigoPedido = 104 )
+        preco <- 16
+        especificacao <- "Cheeseburguer"
+        precofinal <- preco * quantidade
+        verificador <- verdadeiro
+        
+outrocaso
+         verificador <- falso
+fimescolha
+
+
+se (verificador = verdadeiro) entao
+   escreval("")
+   escreval("........................")
+   escreval("O pedido foi concluído!")
+   escreval("........................")
+   escreval("Confirmação de pedido")
+   escreval("Cliente: ", nomeCliente)
+   escreval("Pedido: ", especificacao)
+   escreval("Quantidade: ", quantidade)
+   escreval("Valor por unidade: R$ ", preco)
+   escreval("Valor total do pedido: R$ ", precofinal)
+
+senao
+     escreval("........................")
+     escreval("Parece que houve um erro ao processar o pedido...")
+     escreval("Verifique o código de produto informado")
+     escreval("........................")
+fimse
+
+Fimalgoritmo
+
+
