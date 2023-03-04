@@ -1,0 +1,231 @@
+#Exercícios5
+
+1- Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. 
+
+2- Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores. 
+
+3- Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário. 
+
+4- O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor.
+
+
+#Caso 2: 
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 04/03/2023
+Var
+// Seção de Declarações das variáveis 
+totalVotos, votosBrancos, votosValidos, votosNulos:  inteiro
+porcentagem:real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+escreval("|===============================|")
+escreval("|Bem vindo ao portal da Eleição |")
+escreval("|===============================|")
+escreval("|                               |")
+escreval("|    Confira aqui o resultado   |")
+escreval("|    da ultima eleicao          |")
+escreval("|                               |")
+escreval("|===============================|")
+
+escreval("Informe o número de votos nas eleições: ")
+leia(totalVotos)
+escreval("Informe o número de votos nulos nas eleições :")
+leia(votosNulos)
+escreval("Informe o número de votos válidos nas eleições")
+leia(votosValidos)
+escreval("Informe o número de votos brancos nas eleições")
+leia(votosBrancos)
+
+escreval("Com base nos resultados informados podemos concluir que")
+escreval("O total de votos foi de: ", totalVotos)
+
+porcentagem <- (votosBrancos * 100) / totalVotos
+escreval("O total de votos Brancos foi de", votosBrancos)
+escreval("O que representa: ", porcentagem, "% dos votos válidos")
+
+porcentagem <- totalVotos - (votosBrancos + votosNulos)
+escreval("O total de votos validos foi de", votosValidos)
+escreval("O que representa: ", porcentagem, "% dos votos válidos")
+
+
+porcentagem <- (votosNulos * 100) / totalVotos
+escreval("O total de votos nulos foi de", votosNulos)
+escreval("O que representa: ", porcentagem, "% dos votos válidos")
+
+
+
+Fimalgoritmo
+
+
+#Caso 3: 
+
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 04/03/2023
+Var
+// Seção de Declarações das variáveis 
+
+reajuste, salarioAtual, ultimoSalario, verificaSalario: real
+
+comando, ponto : caractere
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ponto <- "."
+escreval ("|================================|")
+escreval ("|                                |")
+escreval ("| Bem vindo ao Portal do ajuste  |")
+escreval ("|                                |")
+escreval ("|--------------------------------|")
+escreval ("|                                |")
+escreval ("| Aqui voce consegue efetuar     |")
+escreval ("| o reajuste do seu salário      |")
+escreval ("|                                |")
+escreval ("|================================|")
+escreval ("|                                |")
+escreval ("| Deseja presseguir?             |")
+escreval ("| sim(y)                         |")
+escreval ("| nao(n)                         |")
+escreval ("|                                |")
+escreval ("|================================|")
+leia(comando)
+
+se comando = "y" entao
+   escreval ("Muito Bem vamos lá......")
+   escreval ("Para prosseguirmos, preciso de alguns dados.....")
+   escreval ("Primeiramente precisamos verificar o seu cargo")
+senao
+     escreval("Sem problemas se precisar de algo estamos a disposição")
+fimse
+
+escreval("|=============================|")
+escreval("|    Cargo                    |")
+escreval("|=============================|")
+escreval("|    Estagiário               |")
+escreval("|    Assistente administrativo|")
+escreval("|    Analista de dados        |")
+escreval("|    Gerente de projetos      |")
+escreval("|    Diretor operacional      |")
+escreval("|    Diretor financeiro       |")
+escreval("|    CEO                      |")
+escreval("|=============================|")
+escreval("Por favor informe o seu cargo na empresa....")
+leia(comando)
+
+
+escolha verdadeiro
+         caso comando = "estagiario"
+              escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+              reajuste <- 10
+              leia (comando)
+              
+         caso comando = "assistente administrativo"
+             escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 12
+              leia (comando)
+
+         caso comando = "analista de dados"
+             escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 15
+              leia (comando)
+              
+         caso comando = "gerente de projetos"
+              escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 18
+              leia (comando)
+              
+         caso comando = "diretor operacional"
+              escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 20
+              leia (comando)
+              
+        caso comando = "diretor financeiro"
+              escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 22
+              leia (comando)
+
+        caso comando = "ceo"
+              escreval("Seu cargo é ", comando, " correto?")
+              escreval("Sim(y) | Nao (n)")
+                 reajuste <- 25
+              leia (comando)
+
+fimescolha
+
+se comando = "y" entao
+   escreval("Muito bem, vamos prosseguir....")
+   escreval("Agora vou precisar que informe seu ultimo salario")
+   leia(ultimoSalario)
+   escreval("Muito bem, agora informe seu salário atual")
+   leia(salarioAtual)
+   escreval("processando.........")
+senao
+     escreval("Qualquer coisa estamos a disposição")
+fimse
+
+verificaSalario <- ultimoSalario + (ultimoSalario * (reajuste/100))
+
+se (verificaSalario >= salarioAtual) entao
+   escreval ("Verificamos que precisa de um reajuste....")
+senao
+     escreval("Parece que esta tudo certo com seu salário")
+     escreval("Qualquer coisa estamos a disposição")
+fimse
+
+
+reajuste <- (ultimoSalario * (reajuste/100))
+escreval ("O reajuste salarial no seu caso será de R$: ", reajuste, " !")
+reajuste <- (reajuste * 100) / salarioAtual
+escreval ("O que representa um aumento de: ", reajuste, "% em seu salário")
+
+
+
+
+Fimalgoritmo
+
+#Caso 4:
+
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 04/03/2023
+Var
+// Seção de Declarações das variáveis 
+
+precoCarro, custoFabrica, impostos, taxaDistribuidor: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+impostos <- 28/100
+taxaDistribuidor <- 45/100
+
+
+
+escreval("Escreva o custo de fábrica do carro")
+leia(custoFabrica)
+
+precoCarro <- custoFabrica + ( custoFabrica - ((impostos*custofabrica)+(taxaDistribuidor*custoFabrica)))
+
+escreva ("O preço final do carro será de: ")
+escreval(precoCarro)
+
+Fimalgoritmo
+
