@@ -1,0 +1,117 @@
+#Exercicios 4
+
+Um item importante que esqueci de implementar nesse algoritmo é verificar se o número é inteiro antes de verificar se ele é par ou impar
+porque a paridade de um número só existe quando esse for inteiro.
+
+1 - Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+
+2- Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado.
+ Código Condição de pagamento:
+ - À vista em dinheiro ou cheque, recebe 10% de desconto 
+ - À vista no cartão de crédito, recebe 15% de desconto 
+ - Em duas vezes, preço normal de etiqueta sem juros 
+ - Em três vezes, preço normal de etiqueta mais juros de 10%
+ 
+ 
+ #caso 1
+ 
+ Algoritmo "semnome"
+// 
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/03/2023
+Var
+// Seção de Declarações das variáveis 
+
+numero: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+escreval("Escreva um número qualquer")
+leia(numero)
+
+se ((numero mod 2) <> 0) entao
+   escreval("impar")
+senao
+     escreval("par")
+fimse
+
+Fimalgoritmo
+
+
+# caso 2
+Algoritmo "semnome"
+// 
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/03/2023
+Var
+// Seção de Declarações das variáveis 
+
+preco : real
+
+pagamento: caractere
+
+parcelas: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+escreval ("Informe o preco do produto: ")
+leia(preco)
+
+
+escreval ("Pagamento   | Desconto")
+escreval ("Dinheiro    | 10% de desconto")
+escreval ("Cheque      | 10% de desconto")
+escreval ("Débito      | 15% de desconto")
+escreval ("crédito     | 2x ou 3x")
+escreval ("............................")
+escreval ("Escolha sua forma de pagamento: ")
+leia (pagamento)
+
+
+escolha verdadeiro
+        caso (pagamento = "dinheiro")
+        preco <- preco * 0.9
+        escreval ("O preco do produto é de: ", preco)
+
+         caso (pagamento = "cheque")
+        preco <- preco * 0.9
+        escreval ("O preco do produto é de: ", preco)
+
+        caso (pagamento = "debito")
+        preco <- preco * 0.9
+        escreval ("O preco do produto é de: ", preco)
+
+        caso (pagamento = "credito")
+        escreval("Deseja parcelar em 2 ou 3 vezes")
+        escreval ("Crédito 2x  | sem juros")
+        escreval ("Crédito 3x  | 10% de juros")
+        leia(parcelas)
+        
+        outrocaso
+                 escreval ("forma de pagamento inválida")
+fimescolha
+
+escreval
+se (parcelas <> 0) entao
+
+}
+fimse
+se (parcelas = 2)  entao
+        escreval("O preco do produto é de: ", preco)
+fimse
+
+se (parcelas = 3) entao
+        preco <- preco * 1.1
+        escreval("O preco do produto é de: ", preco)
+
+fimse
+
+
+Fimalgoritmo
+
