@@ -1,0 +1,64 @@
+#Exercicio 1
+
+Algoritmos
+1 - Receba dois valores e realize a multiplicação deles. Exiba o resultado final.
+2 - Receba três valores e verifique qual é o maior entre eles. Exiba o maior valor.
+3 - Receba o nome, idade e endereço de uma pessoa e informe em um único texto todas essas informações.
+
+
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Edson Shinki Kaneshima 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 17/02/2023
+Var
+// Seção de Declarações das variáveis 
+x,y,z, soma: real
+idade: inteiro
+
+nome, endereco, espaco:caractere
+texto: caractere
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+escreval ("Informe o valor de X: ")
+leia (x)
+Escreval ("Informe o valor de y:")
+leia (y)
+soma <- x + y
+Escreval ("O valor da soma X + Y, é igual a: " )
+Escreval (soma)
+
+Escreval ("Informe o Valor de Z: ")
+leia(z)
+
+se ((x > y) e (x > z)) então
+   escreval("O maior valor é X")
+   fimse
+   
+se ((y > x) e (y > z)) então
+   escreval("O maior valor é Y")
+   fimse
+   
+se  ((z > x) e (z > y)) entao
+   escreval("O maior valor é Z")
+fimse
+
+se ((z = x) e (x = y)) entao
+   escreval ("Não existe um número maior, pois são iguais")
+   fimse
+
+escreval("Informe o Nome")
+leia(nome)
+escreval("Informe o Endereco")
+leia(endereco)
+escreval("Informe a idade")
+leia(idade)
+
+escreval("Bem vindo ", nome, " O seu endereco: .... ", endereco, " ... já está cadastrado... e alias parabens pois ano completerá ", idade+1, " Anos de vida!!!")
+escreval (texto)
+
+Fimalgoritmo
