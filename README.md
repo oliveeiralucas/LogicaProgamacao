@@ -1,2 +1,2 @@
 # LogicaProgamacao
-Meu repositório tem como objetivo fornecer um conjunto de recursos e materiais para ajudar programadores(as) iniciantes, como eu, a entender os fundamentos da lógica de programação.
+- Meu repositório tem como objetivo fornecer um conjunto de recursos e materiais para ajudar programadores(as) iniciantes, como eu, a entender os fundamentos da lógica de programação. Os exercícios e exemplos de código para praticar são de livros e das aulas da faculdade. Além disso, tentarei disponibilizar artigos e tutoriais explicando conceitos-chave da lógica de programação. Sinta-se bem-vindo(a) e comece sua jornada rumo à maestria da lógica de programação junto comigo!
